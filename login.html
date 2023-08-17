@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+      function onLoginBtnClick(){
+      alert(document.getElementById("txtUsername").value);
+      }
+      function onClearBtnClick(){
+      document.getElementById("txtUsername").value = "" ;
+      document.getElementById("txtPassword").value = "" ;
+      }
+      
+      
+      </script>
+    </head>
+
+  
+    
     <title>Login Form</title>
   </head>
   <!--Author: Gabby Gaza
@@ -10,14 +25,14 @@
   <form action="">
     
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" id="txtUsername" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" id="txtPassword" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit">Login</button> 
+    <button id="btnSubmit" type="submit" onClick="onLoginBtnClick()">Login</button>
 
-    <button type="submit">Cancel</button>
+    <button id="btnClear" type="button" onClick="onClearBtnClick()">Clear</button>
 
     <label>
     
