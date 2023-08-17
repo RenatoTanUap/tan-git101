@@ -12,7 +12,34 @@
       
       
       </script>
-  
+      
+      <style>
+      /* style the container */
+    .container {
+      position: relative;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px 0 30px 0;
+    } 
+
+    input,
+      .btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        margin: 5px 0;
+        opacity: 0.85;
+        display: inline-block;
+        font-size: 17px;
+        line-height: 20px;
+        text-decoration: none; /* remove underline from anchors */
+      }
+
+      
+  </style>
+
+
     <title>Login Form</title>
   </head>
   <!--Author: Gabby Gaza
@@ -20,7 +47,7 @@
     follow
     To Do: Implement submit and cancel functionality-->
   <form action="">
-    
+    <div class="container">
     <label for="uname"><b>Username</b></label>
     <input type="text" id="txtUsername" placeholder="Enter Username" name="uname" required>
     <br>
@@ -28,13 +55,13 @@
     <label for="psw"><b>Password</b></label>
     <input type="password" id="txtPassword" placeholder="Enter Password" name="psw" required>
     <br>
-    
-    <button id="btnSubmit" type="submit" onClick="onLoginBtnClick()">Login</button>
 
-    <button id="btnClear" type="button" onClick="onClearBtnClick()">Clear</button>
+    <button style="color:Black" class="btn" id="btnSubmit" type="submit" onClick="onLoginBtnClick()">Login</button>
+
+    <button style="color:Red" class="btn" id="btnClear" type="button" onClick="onClearBtnClick()">Clear</button>
 
     <label>
-    
+    </div>
   </form>
 
 
