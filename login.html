@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
-      function onLoginBtnClick(){
-      alert(document.getElementById("txtUsername").value);
-      }
-      function onClearBtnClick(){
-      document.getElementById("txtUsername").value = "" ;
-      document.getElementById("txtPassword").value = "" ;
-      }
-      
-      
-      </script>
-      
       <style>
       /* style the container */
     .container {
@@ -35,13 +23,10 @@
         line-height: 20px;
         text-decoration: none; /* remove underline from anchors */
       }
-
-      
   </style>
-
-
     <title>Login Form</title>
   </head>
+  <body>
   <!--Author: Gabby Gaza
     Comment: Javascript implementation will be prioritized. CSS to
     follow
@@ -56,8 +41,7 @@
     <input type="password" id="txtPassword" placeholder="Enter Password" name="psw" required>
     <br>
 
-    <button style="color:Black" class="btn" id="btnSubmit" type="submit" onClick="onLoginBtnClick()">Login</button>
-
+    <button style="color:Black" class="btn" id="btnSubmit" type="button" onClick="onLoginBtnClick()">Login</button>
     <button style="color:Red" class="btn" id="btnClear" type="button" onClick="onClearBtnClick()">Clear</button>
 
     <label>
@@ -65,6 +49,26 @@
   </form>
 
 
+  <script>//will move this to the bottom since it is not functioning up here 
+    const errorMsg = "ERROR: Either the username or the password were not provided.Please try again.";
+
+    function onLoginBtnClick(){
+      let username = document.getElementById("txtUsername").value.trim();
+      let isUsernameEmpty = true;
+
+      if(username.length === 0){
+        let isUsernameEmpty = true;
+        alert(errorMsg); // Display alert message for incomplete login details
+      } else {
+        isUsernameEmpty = false;
+      }
+      console.log("isUsernameEmpty=", isUsernameEmpty);
+    }
+    function onClearBtnClick(){
+    document.getElementById("txtUsername").value = "" ;
+    document.getElementById("txtPassword").value = "" ;
+    }
+    </script>
 
 </body>
 </html>
