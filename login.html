@@ -1,13 +1,27 @@
+  <!--Author: Rafa g-->
 <!DOCTYPE html>
 <html>
   <head>
     <script>
       function onLoginBtnClick(){
-      alert(document.getElementById("txtUsername").value);
+        const errorMsg = "ERROR: Either the username or the password were not provided. Please try again."
+        var username = document.getElementById("txtUsername").value.trim();
+        let isTxtUsernameEmpty = true;
+
+        if(username.length === 0){
+          let isTxtUsernameEmpty = true;
+          alert(errorMsg);
+        } else {
+          isTxtUsernameEmpty = false; 
+          
+        }
+        console.log("isTxtUsernameEmpty=", isTxtUsernameEmpty);
       }
+
+    
       function onClearBtnClick(){
-      document.getElementById("txtUsername").value = "" ;
-      document.getElementById("txtPassword").value = "" ;
+        document.getElementById("txtUsername").value = "" ;
+        document.getElementById("txtPassword").value = "" ;
       }
       
       
