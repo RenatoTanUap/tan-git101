@@ -1,0 +1,92 @@
+  <!--Author: Rafa g-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function onLoginBtnClick(){
+        const errorMsg = "ERROR: Either the username or the password were not provided. Please try again."
+        var username = document.getElementById("txtUsername").value.trim();
+        let isTxtUsernameEmpty = true;
+
+        if(username.length === 0){
+          let isTxtUsernameEmpty = true;
+          alert(errorMsg);
+        } else {
+          isTxtUsernameEmpty = false; 
+          
+        }
+        console.log("isTxtUsernameEmpty=", isTxtUsernameEmpty);
+      }
+
+    
+      function onClearBtnClick(){
+        document.getElementById("txtUsername").value = "" ;
+        document.getElementById("txtPassword").value = "" ;
+      }
+      
+      
+      </script>
+    </head>
+
+    input,
+      .btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        margin: 5px 0;
+        opacity: 0.85;
+        display: inline-block;
+        font-size: 17px;
+        line-height: 20px;
+        text-decoration: none; /* remove underline from anchors */
+      }
+  </style>
+    <title>Login Form</title>
+  </head>
+  <body>
+  <!--Author: Gabby Gaza
+    Comment: Javascript implementation will be prioritized. CSS to
+    follow
+    To Do: Implement submit and cancel functionality-->
+  <form action="">
+    <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" id="txtUsername" placeholder="Enter Username" name="uname" required>
+    <br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="txtPassword" placeholder="Enter Password" name="psw" required>
+    <br>
+
+    <button style="color:Black" class="btn" id="btnSubmit" type="button" onClick="onLoginBtnClick()">Login</button>
+    <button style="color:Red" class="btn" id="btnClear" type="button" onClick="onClearBtnClick()">Clear</button>
+
+    <label>
+    </div>
+  </form>
+
+
+  <script>//will move this to the bottom since it is not functioning up here 
+    const errorMsg = "ERROR: Either the username or the password were not provided.Please try again.";
+
+    function onLoginBtnClick(){
+      let username = document.getElementById("txtUsername").value.trim();
+      let isUsernameEmpty = true;
+
+      if(username.length === 0){
+        let isUsernameEmpty = true;
+        alert(errorMsg); // Display alert message for incomplete login details
+      } else {
+        isUsernameEmpty = false;
+      }
+      console.log("isUsernameEmpty=", isUsernameEmpty);
+    }
+    function onClearBtnClick(){
+    document.getElementById("txtUsername").value = "" ;
+    document.getElementById("txtPassword").value = "" ;
+    }
+    </script>
+
+</body>
+</html>
